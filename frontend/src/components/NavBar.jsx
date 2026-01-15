@@ -96,6 +96,10 @@ const NavBar = () => {
                     Inicio
                 </Link>
 
+                <Link to="/proyecto-institucional" style={{ ...linkStyle, ...(location.pathname === '/proyecto-institucional' ? activeStyle : {}) }} onClick={closeAll}>
+                    Proyecto Institucional
+                </Link>
+
                 {/* Simuladores Didácticos - Solo si está autenticado */}
                 {isAuthenticated && (
                     <div className={`dropdown ${openSubmenu === 'didactic' ? 'active' : ''}`}>

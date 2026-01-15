@@ -61,6 +61,10 @@ import GamificationPage from './pages/GamificationPage';
 
 import { ThemeProvider } from './components/ThemeContext';
 
+import AboutPage from './pages/AboutPage';
+
+// ... other imports
+
 function App() {
   return (
     <ThemeProvider>
@@ -72,6 +76,7 @@ function App() {
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
             <Route path="/" element={<Home />} />
+            <Route path="/proyecto-institucional" element={<AboutPage />} />
             {/* Arduino y Programación */}
             {/* Rutas Protegidas - Simuladores y Módulos Didácticos */}
             <Route element={<ProtectedRoute />}>
