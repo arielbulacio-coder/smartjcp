@@ -278,7 +278,7 @@ const GradesManagement = () => {
                         </select>
                     </div>
                     <div style={{ flex: 1, maxWidth: '250px' }}>
-                        <label className="d-block mb-1">Materia</label>
+                        <label className="d-block mb-1">Curso</label>
                         <select className="form-control" value={selectedSubject} onChange={(e) => setSelectedSubject(e.target.value)} disabled={loading}>
                             {(availableSubjects.length > 0 ? availableSubjects : SUBJECTS).map(s => <option key={s} value={s}>{s}</option>)}
                         </select>

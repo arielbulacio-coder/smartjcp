@@ -161,7 +161,7 @@ const CourseSubjectManager = () => {
 
                 <div className="col-md-6 mb-4">
                     <div className="glass-card p-4 h-100">
-                        <h3 className="mb-3 border-bottom pb-2">📝 Materias</h3>
+                        <h3 className="mb-3 border-bottom pb-2">📝 Cursos (Asignaturas)</h3>
                         <ul className="list-group mb-4" style={{ maxHeight: '400px', overflowY: 'auto' }}>
                             {subjects.map(s => (
                                 <li key={s.id} className="list-group-item d-flex justify-content-between align-items-center bg-transparent text-white border-secondary">

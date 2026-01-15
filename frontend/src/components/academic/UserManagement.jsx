@@ -70,7 +70,7 @@ const UserManagement = () => {
                         style={{ padding: '0.5rem', borderRadius: '4px', border: 'none' }}
                     >
                         <option value="alumno">Alumno</option>
-                        <option value="profesor">Profesor</option>
+                        <option value="profesor">Docente</option>
                         <option value="preceptor">Preceptor</option>
                         <option value="jefe_preceptores">Jefe de Preceptores</option>
                         <option value="secretario">Secretario</option>

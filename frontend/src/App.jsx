@@ -55,6 +55,11 @@ import LoginPage from './pages/LoginPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 
+// New Modules
+import CommunityCoursesPage from './pages/CommunityCoursesPage';
+import CourseViewerPage from './pages/CourseViewerPage';
+import GamificationPage from './pages/GamificationPage';
+
 import { ThemeProvider } from './components/ThemeContext';
 
 function App() {
@@ -138,6 +143,13 @@ function App() {
             {/* Perfil - Todos */}
             <Route element={<ProtectedRoute />}>
               <Route path="/perfil" element={<ProfilePage />} />
+
+              {/* Cursos Comunidad */}
+              <Route path="/cursos-comunidad" element={<CommunityCoursesPage />} />
+              <Route path="/cursos-comunidad/:id" element={<CourseViewerPage />} />
+
+              {/* Gamificación */}
+              <Route path="/gamificacion" element={<GamificationPage />} />
             </Route>
           </Routes>
 

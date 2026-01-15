@@ -67,7 +67,7 @@ const TeacherAssignment = () => {
                 curso: selectedCourse,
                 materia: selectedSubject
             });
-            alert('Materia asignada correctamente');
+            alert('Curso asignado correctamente');
             fetchData();
         } catch (error) {
             console.error(error);
@@ -91,14 +91,14 @@ const TeacherAssignment = () => {
 
     return (
         <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '2rem' }}>
-            <h1 className="mb-4 text-center">Gestión de Docentes y Materias</h1>
+            <h1 className="mb-4 text-center">Gestión de Docentes y Cursos</h1>
 
             {/* CREATE CARD */}
             <div className="glass-card p-4 mb-5">
-                <h3 className="mb-3">Asignar Nueva Materia</h3>
+                <h3 className="mb-3">Asignar Nuevo Curso</h3>
                 <div className="d-flex gap-3 flex-wrap align-items-end">
                     <div style={{ flex: 1, minWidth: '250px' }}>
-                        <label className="d-block mb-2">Profesor</label>
+                        <label className="d-block mb-2">Docente</label>
                         <select className="form-control" value={selectedTeacher} onChange={e => setSelectedTeacher(e.target.value)}>
                             <option value="">-- Seleccionar --</option>
                             {teachers.map(t => (
@@ -115,7 +115,7 @@ const TeacherAssignment = () => {
                     </div>
 
                     <div style={{ flex: 1, minWidth: '250px' }}>
-                        <label className="d-block mb-2">Materia</label>
+                        <label className="d-block mb-2">Curso</label>
                         <select className="form-control" value={selectedSubject} onChange={e => setSelectedSubject(e.target.value)}>
                             {subjectOptions.map(s => <option key={s.id} value={s.nombre}>{s.nombre}</option>)}
                         </select>
@@ -134,9 +134,9 @@ const TeacherAssignment = () => {
                     <table className="table" style={{ color: 'var(--text-primary)' }}>
                         <thead>
                             <tr>
-                                <th>Profesor</th>
+                                <th>Docente</th>
                                 <th>Curso</th>
-                                <th>Materia</th>
+                                <th>Curso</th>
                                 <th>Ciclo</th>
                                 <th style={{ textAlign: 'right' }}>Acciones</th>
                             </tr>

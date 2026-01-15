@@ -142,7 +142,7 @@ const LessonPlanModule = () => {
                     </select>
                 </div>
                 <div style={{ flex: 1 }}>
-                    <label>Materia:</label>
+                    <label>Curso:</label>
                     <select className="form-control" value={selectedSubject} onChange={e => setSelectedSubject(e.target.value)}>
                         {availableSubjects.map(s => <option key={s} value={s}>{s}</option>)}
                     </select>

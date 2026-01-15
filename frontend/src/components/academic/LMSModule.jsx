@@ -343,7 +343,7 @@ const LMSModule = () => {
                             </select>
                         </div>
                         <div style={{ minWidth: '250px' }}>
-                            <label className="small text-muted mb-1">Materia</label>
+                            <label className="small text-muted mb-1">Curso</label>
                             <select className="form-control form-control-sm" value={selectedSubject || ''} onChange={e => setSelectedSubject(e.target.value)} disabled={loading}>
                                 {isTeacher && user.role === 'profesor' ? (
                                     availableSubjects.length ? availableSubjects.map(s => <option key={s} value={s}>{s}</option>) : <option value="">Seleccione curso</option>
@@ -359,7 +359,7 @@ const LMSModule = () => {
                     <div className="d-flex align-items-center gap-3 flex-grow-1">
                         <div className="badge bg-primary fs-6 p-2">Curso: {selectedCourse}</div>
                         <div style={{ flex: 1 }}>
-                            <label className="small text-muted mb-1">Materia</label>
+                            <label className="small text-muted mb-1">Curso</label>
                             <select className="form-control form-control-sm" value={selectedSubject} onChange={e => setSelectedSubject(e.target.value)}>
                                 {SUBJECTS.map(s => <option key={s} value={s}>{s}</option>)}
                             </select>

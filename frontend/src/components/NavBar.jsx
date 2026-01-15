@@ -194,6 +194,27 @@ const NavBar = () => {
                     </div>
                 )}
 
+                {/* Nuevo: Cursos Comunidad y Gamificación */}
+                {isAuthenticated && (
+                    <div className={`dropdown ${openSubmenu === 'community' ? 'active' : ''}`}>
+                        <div
+                            className="dropdown-trigger"
+                            style={linkStyle}
+                            onClick={() => toggleSubmenu('community')}
+                        >
+                            Ciudad Aprendizaje <span className="arrow">▼</span>
+                        </div>
+                        <div className="dropdown-menu" style={{ minWidth: '250px' }}>
+                            <Link to="/cursos-comunidad" style={linkStyle} onClick={closeAll}>
+                                🎓 Cursos Abiertos
+                            </Link>
+                            <Link to="/gamificacion" style={linkStyle} onClick={closeAll}>
+                                🎮 Gamificación
+                            </Link>
+                        </div>
+                    </div>
+                )}
+
                 {/* Login / Logout */}
                 {isAuthenticated ? (
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0 1rem' }}>
