@@ -66,7 +66,7 @@ const NavBar = () => {
                         alt="Logo"
                         style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover', background: '#fff', border: '2px solid var(--primary-color)' }}
                     />
-                    <span className="brand-text">EEST San Miguel</span>
+                    <span className="brand-text">smartjcp</span>
                 </Link>
             </div>
 

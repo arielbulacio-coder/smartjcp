@@ -15,14 +15,17 @@ const Footer = () => {
 
                 {/* Info Institucional */}
                 <div>
-                    <h3 style={{ color: 'var(--text-main)', marginBottom: '1rem' }}>EEST UTN San Miguel</h3>
-                    <p>Especialidad Electrónica</p>
-                    <p style={{ marginTop: '1rem', fontStyle: 'italic' }}>"Formando los técnicos del futuro"</p>
+                    <h3 style={{ color: 'var(--text-main)', marginBottom: '1rem' }}>SmartJCP - Ciudad del Aprendizaje</h3>
+                    <p>Intendencia Mario Alberto Ishii</p>
+                    <p style={{ marginTop: '1rem', fontStyle: 'italic' }}>"El futuro es hoy, y se construye educando"</p>
 
                     <div style={{ marginTop: '1.5rem' }}>
                         <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem' }}>Contacto</h4>
                         <p style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.5rem' }}>
-                            <span>📧</span> est.sanmiguel@inspt.utn.edu.ar  info.sanmiguel@inspt.utn.edu.ar
+                            <span>📧</span> contacto@smartjcp.gob.ar
+                        </p>
+                        <p style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.5rem' }}>
+                            <span>📞</span> (02320) 44-5566
                         </p>
                     </div>
                 </div>
@@ -30,12 +33,12 @@ const Footer = () => {
 
                 {/* Ubicación (Google Maps) */}
                 <div>
-                    <h3 style={{ color: 'var(--text-main)', marginBottom: '1rem' }}>Ubicación</h3>
-                    <p style={{ marginBottom: '0.5rem' }}>📍 Rafael 50, Bella Vista, Bs As</p>
+                    <h3 style={{ color: 'var(--text-main)', marginBottom: '1rem' }}>Distrito José C. Paz</h3>
+                    <p style={{ marginBottom: '0.5rem' }}>📍 Av. Gaspar Campos 6151, José C. Paz, Bs. As.</p>
                     <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--glass-border)' }}>
                         <iframe
-                            title="Ubicacion EEST UTN"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.186626182064!2d-58.69466632426214!3d-34.56636757279159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbdqaaaaaaaaa%3A0xaaaaaaaaaaaaaaa!2sRafael%2050%2C%20B1661%20Bella%20Vista%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                            title="Ubicacion JCP"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13146.123456789!2d-58.7594!3d-34.5154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc99b82855877f%3A0x8e82a3a5f8e5f8f!2sJos%C3%A9%20C.%20Paz%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
                             width="100%"
                             height="150"
                             style={{ border: 0 }}
@@ -70,7 +73,7 @@ const Footer = () => {
             </div>
 
             <div style={{ textAlign: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)' }}>
-                <p>© 2026 EEST UTN San Miguel. Desarrollo Didáctico.</p>
+                <p>© 2026 SmartJCP - José C. Paz Ciudad del Aprendizaje.</p>
             </div>
         </footer>
     );
