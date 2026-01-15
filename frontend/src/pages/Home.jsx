@@ -16,6 +16,10 @@ import imgLogo from '../assets/carousel/IMG-20251211-WA0113.jpg';
 // Tool Icons removed as they are no longer displayed on Home
 
 
+// Import New Highlight Covers
+import imgHeroMain from '../assets/highlights/cover_main.jpg';
+import imgHeroSmall from '../assets/highlights/cover_community.jpg';
+
 // Import Community Course Images
 import imgIA from '../assets/courses/curso_ia_learning_1768497523497.png';
 import imgCloud from '../assets/courses/curso_cloud_computing_1768497506593.png';
@@ -28,7 +32,7 @@ const Home = () => {
     return (
         <div className="app-container" style={{ textAlign: 'center', paddingTop: '1rem', paddingBottom: '5rem' }}>
 
-            {/* Header / Context Section */}
+            {/* HEADER / CONTEXT (Keep existing) */}
             <div className="glass-card" style={{ maxWidth: '100%', margin: '0 auto 1.5rem auto', padding: '1.5rem', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '1rem' }}>
                     <img
@@ -52,6 +56,50 @@ const Home = () => {
                         <br />
                         <a href="https://www.revistagente.com/actualidad/jose-c-paz-reconocida-por-la-unesco-por-su-modelo-de-transformacion-educativa/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary-color)', textDecoration: 'underline' }}>Leer nota completa en Gente Online</a>
                     </p>
+                </div>
+            </div>
+
+            {/* HERO SECTION (PORTADA) - UPDATED WITH USER IMAGE */}
+            <div style={{
+                width: '100%',
+                maxWidth: '1200px',
+                margin: '0 auto 2rem auto',
+                height: '400px',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+            }}>
+                <img src={imgHeroMain} alt="Portada José C. Paz" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{
+                    position: 'absolute',
+                    bottom: 0, left: 0, right: 0,
+                    padding: '2rem',
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.95), transparent)',
+                    textAlign: 'left'
+                }}>
+                    <h2 style={{ color: 'white', fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'bold', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Comunidad y Futuro</h2>
+                    <p style={{ color: '#e0e0e0', fontSize: '1.2rem', maxWidth: '800px' }}>
+                        Construyendo un futuro mejor a través de la educación pública, inclusiva y de calidad para todos los habitantes de José C. Paz.
+                    </p>
+                </div>
+            </div>
+
+            {/* FEATURED SECTION - UPDATED WITH USER IMAGE */}
+            <div style={{ maxWidth: '1200px', margin: '0 auto 3rem auto', display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center' }}>
+                <div style={{ flex: '1 1 500px', overflow: 'hidden', borderRadius: '16px', boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}>
+                    <img src={imgHeroSmall} alt="Infraestructura Destacada" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </div>
+                <div style={{ flex: '1 1 400px', textAlign: 'left', padding: '1rem' }}>
+                    <h3 style={{ fontSize: '2rem', color: 'var(--primary-color)', marginBottom: '1rem' }}>Infraestructura de Vanguardia</h3>
+                    <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: 'var(--text-primary)' }}>
+                        Nuestros espacios están diseñados para potenciar el talento. Contamos con <strong>nuevos edificios escolares</strong>, talleres equipados con la última tecnología y entornos seguros que fomentan el aprendizaje práctico y teórico.
+                    </p>
+                    <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem' }}>
+                        <div className="badge bg-primary p-2" style={{ fontSize: '0.9rem' }}>Aulas Digitales</div>
+                        <div className="badge bg-secondary p-2" style={{ fontSize: '0.9rem' }}>Laboratorios</div>
+                        <div className="badge bg-info text-dark p-2" style={{ fontSize: '0.9rem' }}>Seguridad</div>
+                    </div>
                 </div>
             </div>
 
@@ -100,7 +148,7 @@ const Home = () => {
             </div>
             {/* End Smart City Vision Section */}
 
-            {/* Bootstrap Carousel - New Images */}
+            {/* Bootstrap Carousel - Remaining Images */}
             <div style={{
                 width: '100%',
                 maxWidth: '1200px',
@@ -133,40 +181,6 @@ const Home = () => {
                         <img className="d-block w-100" src={img6} alt="Slide 6" style={{ height: '300px', objectFit: 'cover' }} />
                     </Carousel.Item>
                 </Carousel>
-            </div>
-
-            {/* Highlights Section (Moved out of Carousel) */}
-            <div style={{ maxWidth: '1200px', margin: '0 auto 4rem auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem', padding: '0 1rem' }}>
-
-                {/* Highlight 1: Infrastructure */}
-                <div className="glass-card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ height: '250px', position: 'relative' }}>
-                        <img src={img1} alt="Infraestructura Escolar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)' }}>
-                            <h3 style={{ color: 'white', margin: 0, fontSize: '1.5rem' }}>Infraestructura de Vanguardia</h3>
-                        </div>
-                    </div>
-                    <div style={{ padding: '1.5rem', textAlign: 'left' }}>
-                        <p style={{ color: 'var(--text-dim)', fontSize: '1rem' }}>
-                            Nuevos espacios diseñados para el aprendizaje técnico práctico. Talleres equipados, laboratorios de seguridad y aulas digitales.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Highlight 2: Community */}
-                <div className="glass-card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ height: '250px', position: 'relative' }}>
-                        <img src={img3} alt="Comunidad Educativa" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)' }}>
-                            <h3 style={{ color: 'white', margin: 0, fontSize: '1.5rem' }}>Comunidad y Futuro</h3>
-                        </div>
-                    </div>
-                    <div style={{ padding: '1.5rem', textAlign: 'left' }}>
-                        <p style={{ color: 'var(--text-dim)', fontSize: '1rem' }}>
-                            Un compromiso firme con la educación pública de calidad, integrando a familias, docentes y el municipio en un proyecto común.
-                        </p>
-                    </div>
-                </div>
             </div>
 
 
