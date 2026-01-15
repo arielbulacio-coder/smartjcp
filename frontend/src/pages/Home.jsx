@@ -38,7 +38,7 @@ const Home = () => {
                     <img
                         src={imgLogo}
                         alt="Logo José C. Paz"
-                        style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover', boxShadow: '0 4px 15px rgba(0,0,0,0.2)' }}
+                        style={{ width: 'auto', height: '120px', borderRadius: '8px', objectFit: 'contain', boxShadow: '0 4px 15px rgba(0,0,0,0.2)' }}
                     />
                     <div>
                         <h1 style={{ fontSize: '1.8rem', fontWeight: 'bold', margin: '0.5rem 0', lineHeight: '1.2' }}>Plataforma Educativa SmartJCP</h1>
@@ -64,18 +64,21 @@ const Home = () => {
                 width: '100%',
                 maxWidth: '1200px',
                 margin: '0 auto 2rem auto',
-                height: '400px',
                 borderRadius: '20px',
                 overflow: 'hidden',
                 position: 'relative',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: '#000'
             }}>
-                <img src={imgHeroMain} alt="Portada José C. Paz" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={imgHeroMain} alt="Portada José C. Paz" style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'contain' }} />
                 <div style={{
                     position: 'absolute',
                     bottom: 0, left: 0, right: 0,
                     padding: '2rem',
-                    background: 'linear-gradient(to top, rgba(0,0,0,0.95), transparent)',
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4))',
                     textAlign: 'left'
                 }}>
                     <h2 style={{ color: 'white', fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'bold', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Comunidad y Futuro</h2>
