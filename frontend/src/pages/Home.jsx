@@ -61,23 +61,19 @@ const Home = () => {
 
             {/* HERO SECTION (PORTADA) - UPDATED WITH USER IMAGE */}
             <div style={{
-                width: '100%',
-                maxWidth: '1200px',
-                margin: '0 auto 2rem auto',
-                borderRadius: '20px',
-                overflow: 'hidden',
                 position: 'relative',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                width: 'fit-content',
+                margin: '0 auto 2rem auto',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
             }}>
-                <img src={imgHeroMain} alt="Portada José C. Paz" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <img src={imgHeroMain} alt="Portada José C. Paz" style={{ height: 'auto', maxHeight: '400px', width: 'auto', maxWidth: '100%', display: 'block' }} />
                 <div style={{
                     position: 'absolute',
                     bottom: 0, left: 0, right: 0,
                     padding: '2rem',
-                    background: 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4))',
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)',
                     textAlign: 'left'
                 }}>
                     <h2 style={{ color: 'white', fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'bold', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Comunidad y Futuro</h2>
