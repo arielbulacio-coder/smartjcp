@@ -111,13 +111,8 @@ const Home = () => {
                 border: '1px solid rgba(255,255,255,0.1)'
             }}>
                 <Carousel fade interval={3500} pause="hover" touch={true}>
-                    <Carousel.Item>
-                        <img className="d-block w-100" src={img1} alt="Slide 1" style={{ height: '300px', objectFit: 'cover' }} />
-                        <Carousel.Caption className="glass-panel-caption">
-                            <h3>Infraestructura Escolar</h3>
-                            <p>Nuevos espacios para el aprendizaje técnico.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
+                    {/* Slide 1 removed (Infrastructure) - Moved to highlighted section */}
+
                     <Carousel.Item>
                         <img className="d-block w-100" src={img2} alt="Slide 2" style={{ height: '300px', objectFit: 'cover' }} />
                         <Carousel.Caption className="glass-panel-caption">
@@ -125,13 +120,9 @@ const Home = () => {
                             <p>Equipamiento moderno para nuestros estudiantes.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="d-block w-100" src={img3} alt="Slide 3" style={{ height: '300px', objectFit: 'cover' }} />
-                        <Carousel.Caption className="glass-panel-caption">
-                            <h3>Comunidad Educativa</h3>
-                            <p>Compromiso con la educación pública de calidad.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
+
+                    {/* Slide 3 removed (Community) - Moved to highlighted section */}
+
                     <Carousel.Item>
                         <img className="d-block w-100" src={img4} alt="Slide 4" style={{ height: '300px', objectFit: 'cover' }} />
                     </Carousel.Item>
@@ -142,6 +133,40 @@ const Home = () => {
                         <img className="d-block w-100" src={img6} alt="Slide 6" style={{ height: '300px', objectFit: 'cover' }} />
                     </Carousel.Item>
                 </Carousel>
+            </div>
+
+            {/* Highlights Section (Moved out of Carousel) */}
+            <div style={{ maxWidth: '1200px', margin: '0 auto 4rem auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem', padding: '0 1rem' }}>
+
+                {/* Highlight 1: Infrastructure */}
+                <div className="glass-card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ height: '250px', position: 'relative' }}>
+                        <img src={img1} alt="Infraestructura Escolar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)' }}>
+                            <h3 style={{ color: 'white', margin: 0, fontSize: '1.5rem' }}>Infraestructura de Vanguardia</h3>
+                        </div>
+                    </div>
+                    <div style={{ padding: '1.5rem', textAlign: 'left' }}>
+                        <p style={{ color: 'var(--text-dim)', fontSize: '1rem' }}>
+                            Nuevos espacios diseñados para el aprendizaje técnico práctico. Talleres equipados, laboratorios de seguridad y aulas digitales.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Highlight 2: Community */}
+                <div className="glass-card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ height: '250px', position: 'relative' }}>
+                        <img src={img3} alt="Comunidad Educativa" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)' }}>
+                            <h3 style={{ color: 'white', margin: 0, fontSize: '1.5rem' }}>Comunidad y Futuro</h3>
+                        </div>
+                    </div>
+                    <div style={{ padding: '1.5rem', textAlign: 'left' }}>
+                        <p style={{ color: 'var(--text-dim)', fontSize: '1rem' }}>
+                            Un compromiso firme con la educación pública de calidad, integrando a familias, docentes y el municipio en un proyecto común.
+                        </p>
+                    </div>
+                </div>
             </div>
 
 
@@ -200,6 +225,57 @@ const Home = () => {
                                 <div style={{ marginTop: '1rem' }}>
                                     <span className="badge bg-success me-2">Sustentabilidad</span>
                                     <span className="badge bg-info text-dark">Práctico</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Course Card 4 - New */}
+                        <div className="glass-card" style={{ padding: '0', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
+                            <div style={{ height: '160px', overflow: 'hidden' }}>
+                                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2664&auto=format&fit=crop" alt="Blockchain" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>Blockchain</h3>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-dim)', flex: 1 }}>
+                                    Entiende la tecnología detrás de las criptomonedas y contratos inteligentes.
+                                </p>
+                                <div style={{ marginTop: '1rem' }}>
+                                    <span className="badge bg-warning text-dark me-2">Finanzas</span>
+                                    <span className="badge bg-info text-dark">Online</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Course Card 5 - New */}
+                        <div className="glass-card" style={{ padding: '0', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
+                            <div style={{ height: '160px', overflow: 'hidden' }}>
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop" alt="Industria 4.0" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>Industria 4.0</h3>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-dim)', flex: 1 }}>
+                                    Automatización, IoT y Big Data aplicados a procesos industriales modernos.
+                                </p>
+                                <div style={{ marginTop: '1rem' }}>
+                                    <span className="badge bg-danger me-2">Industria</span>
+                                    <span className="badge bg-info text-dark">Avancado</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Course Card 6 - New */}
+                        <div className="glass-card" style={{ padding: '0', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
+                            <div style={{ height: '160px', overflow: 'hidden' }}>
+                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2669&auto=format&fit=crop" alt="Tech Trends" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>Nuevas Tecnologías</h3>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-dim)', flex: 1 }}>
+                                    Explora las tendencias emergentes que están moldeando el futuro del trabajo.
+                                </p>
+                                <div style={{ marginTop: '1rem' }}>
+                                    <span className="badge bg-primary me-2">Innovación</span>
+                                    <span className="badge bg-info text-dark">Seminario</span>
                                 </div>
                             </div>
                         </div>
