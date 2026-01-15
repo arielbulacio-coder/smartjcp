@@ -1,3 +1,5 @@
+./DEPLOY_TO_GCP.ps1
+
 
 # Script de Despliegue para SmartJCP en Google Cloud Platform
 # Ejecutar en PowerShell
