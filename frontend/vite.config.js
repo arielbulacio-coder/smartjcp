@@ -8,12 +8,8 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.png', 'pwa-192x192.png', 'pwa-512x512.png'],
+      includeAssets: ['favicon.ico', 'logo-pwa.png', 'pwa-192x192.png', 'pwa-512x512.png'],
       manifest: {
-        name: 'EST UTN SM',
-        short_name: 'EST UTN SM',
-        description: 'Plataforma educativa técnica y simuladores didácticos.',
-        theme_color: '#1a1a1a',
         background_color: '#1a1a1a',
         display: 'standalone',
         scope: '/utnsanmiguel/',

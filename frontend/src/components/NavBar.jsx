@@ -62,9 +62,9 @@ const NavBar = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <Link to="/" style={{ textDecoration: 'none', color: 'var(--text-main)', fontWeight: 'bold', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px' }} onClick={closeAll}>
                     <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrPObWUEKrBqrvd1OYTRY_LwudGF6HC7Ok1A&s"
+                        src="/logo-pwa.png"
                         alt="Logo"
-                        style={{ width: '35px', height: '35px', borderRadius: '50%', objectFit: 'contain', background: '#fff', border: '2px solid var(--primary-color)' }}
+                        style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover', background: '#fff', border: '2px solid var(--primary-color)' }}
                     />
                     <span className="brand-text">EEST San Miguel</span>
                 </Link>

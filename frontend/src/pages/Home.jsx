@@ -5,166 +5,90 @@ import '../carousel.css';
 import { useAuth } from '../context/AuthContext';
 
 // Import Assets
-import imgFacade from '../assets/carousel_main_new.png';
-import imgLab from '../assets/electronics_lab.png';
-import imgCampus from '../assets/new_campus_rendering.png';
-import imgEducation from '../assets/technical_education_workshop.png';
-import imgTools from '../assets/workshop_tools.png';
-import imgCommunity from '../assets/carousel_community.jpg';
+import img1 from '../assets/carousel/2.jpg';
+import img2 from '../assets/carousel/3.jpg';
+import img3 from '../assets/carousel/4.jpg';
+import img4 from '../assets/carousel/5.jpeg';
+import img5 from '../assets/carousel/6.jpeg';
+import img6 from '../assets/carousel/7.jpg';
+import imgLogo from '../assets/carousel/IMG-20251211-WA0113.jpg';
 
-// Import Tool Icons
-import imgMicrometer from '../assets/micrometer_icon.png';
-import imgCaliper from '../assets/caliper_icon.png';
-// imgRule and imgSaw will be used as static assets
-import imgMultimeter from '../assets/multimeter_icon.png';
-import imgOscilloscope from '../assets/oscilloscope_icon.png';
-import imgSoldering from '../assets/soldering_station_icon.png';
+// ... other imports
 
 const Home = () => {
     const { isAuthenticated } = useAuth();
     return (
-        <div className="app-container" style={{ textAlign: 'center', paddingTop: '2rem' }}>
-            {/* Bootstrap Carousel - School Images */}
+        <div className="app-container" style={{ textAlign: 'center', paddingTop: '1rem', paddingBottom: '5rem' }}>
+
+            {/* Header / Context Section */}
+            <div className="glass-card" style={{ maxWidth: '100%', margin: '0 auto 1.5rem auto', padding: '1.5rem', borderRadius: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '1rem' }}>
+                    <img
+                        src={imgLogo}
+                        alt="Logo José C. Paz"
+                        style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover', boxShadow: '0 4px 15px rgba(0,0,0,0.2)' }}
+                    />
+                    <div>
+                        <h1 style={{ fontSize: '1.8rem', fontWeight: 'bold', margin: '0.5rem 0', lineHeight: '1.2' }}>Plataforma Educativa SmartJCP</h1>
+                        <h2 style={{ fontSize: '1.2rem', color: 'var(--primary-color)', margin: 0 }}>José C. Paz: Ciudad del Aprendizaje</h2>
+                        <h3 style={{ fontSize: '1rem', color: 'var(--text-dim)', margin: '0.5rem 0 0 0' }}>Intendente Mario Alberto Ishii</h3>
+                    </div>
+                </div>
+
+                <div style={{ marginTop: '1.5rem', textAlign: 'left', fontSize: '0.95rem', lineHeight: '1.5', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem' }}>
+                    <p style={{ marginBottom: '0.5rem' }}>
+                        <strong>Reconocimiento UNESCO:</strong> José C. Paz ha sido reconocida internacionalmente por la UNESCO como "Ciudad del Aprendizaje" por su modelo de transformación educativa e inclusión social.
+                    </p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                        "La apuesta del municipio por el aprendizaje permanente y por una educación accesible para todos transformó a la ciudad en un modelo de inclusión social y desarrollo sostenible."
+                        <br />
+                        <a href="https://www.revistagente.com/actualidad/jose-c-paz-reconocida-por-la-unesco-por-su-modelo-de-transformacion-educativa/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary-color)', textDecoration: 'underline' }}>Leer nota completa en Gente Online</a>
+                    </p>
+                </div>
+            </div>
+
+            {/* Bootstrap Carousel - New Images */}
             <div style={{
                 width: '100%',
                 maxWidth: '1200px',
-                margin: '0 auto 3rem auto',
+                margin: '0 auto 2rem auto',
                 borderRadius: '16px',
                 overflow: 'hidden',
-                boxShadow: '0 8px 32px rgba(0, 242, 255, 0.3)',
-                border: '2px solid var(--primary-color)'
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+                border: '1px solid rgba(255,255,255,0.1)'
             }}>
-                <Carousel fade interval={4000} pause="hover">
+                <Carousel fade interval={3500} pause="hover" touch={true}>
                     <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={imgFacade}
-                            alt="EEST UTN San Miguel - Edificio Principal"
-                            style={{ height: '400px', objectFit: 'cover' }}
-                        />
-                        <Carousel.Caption style={{
-                            background: 'rgba(0, 0, 0, 0.7)',
-                            borderRadius: '8px',
-                            padding: '1rem'
-                        }}>
-                            <h3>EEST UTN San Miguel</h3>
-                            <p>Edificio Principal - Especialidad Electrónica</p>
+                        <img className="d-block w-100" src={img1} alt="Slide 1" style={{ height: '300px', objectFit: 'cover' }} />
+                        <Carousel.Caption className="glass-panel-caption">
+                            <h3>Infraestructura Escolar</h3>
+                            <p>Nuevos espacios para el aprendizaje técnico.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-
                     <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={imgLab}
-                            alt="Instalaciones EEST UTN"
-                            style={{ height: '400px', objectFit: 'cover' }}
-                        />
-                        <Carousel.Caption style={{
-                            background: 'rgba(0, 0, 0, 0.7)',
-                            borderRadius: '8px',
-                            padding: '1rem'
-                        }}>
-                            <h3>Laboratorios Especializados</h3>
-                            <p>Equipamiento de última generación</p>
+                        <img className="d-block w-100" src={img2} alt="Slide 2" style={{ height: '300px', objectFit: 'cover' }} />
+                        <Carousel.Caption className="glass-panel-caption">
+                            <h3>Tecnología Avanzada</h3>
+                            <p>Equipamiento moderno para nuestros estudiantes.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-
                     <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={imgCampus}
-                            alt="Nueva Escuela Técnica UTN"
-                            style={{ height: '400px', objectFit: 'cover' }}
-                        />
-                        <Carousel.Caption style={{
-                            background: 'rgba(0, 0, 0, 0.7)',
-                            borderRadius: '8px',
-                            padding: '1rem'
-                        }}>
-                            <h3>Crecimiento Institucional</h3>
-                            <p>Nueva escuela técnica dependiente de la UTN</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={imgEducation}
-                            alt="Actividades Educativas"
-                            style={{ height: '400px', objectFit: 'cover' }}
-                        />
-                        <Carousel.Caption style={{
-                            background: 'rgba(0, 0, 0, 0.7)',
-                            borderRadius: '8px',
-                            padding: '1rem'
-                        }}>
-                            <h3>Formación Integral</h3>
-                            <p>Educación técnica de excelencia</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={imgTools}
-                            alt="Laboratorios y Talleres"
-                            style={{ height: '400px', objectFit: 'cover' }}
-                        />
-                        <Carousel.Caption style={{
-                            background: 'rgba(0, 0, 0, 0.7)',
-                            borderRadius: '8px',
-                            padding: '1rem'
-                        }}>
-                            <h3>Instalaciones Modernas</h3>
-                            <p>Espacios de aprendizaje</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={imgCommunity}
-                            alt="Comunidad Educativa"
-                            style={{ height: '400px', objectFit: 'cover' }}
-                        />
-                        <Carousel.Caption style={{
-                            background: 'rgba(0, 0, 0, 0.7)',
-                            borderRadius: '8px',
-                            padding: '1rem'
-                        }}>
+                        <img className="d-block w-100" src={img3} alt="Slide 3" style={{ height: '300px', objectFit: 'cover' }} />
+                        <Carousel.Caption className="glass-panel-caption">
                             <h3>Comunidad Educativa</h3>
-                            <p>Más de 50 años formando profesionales</p>
+                            <p>Compromiso con la educación pública de calidad.</p>
                         </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="d-block w-100" src={img4} alt="Slide 4" style={{ height: '300px', objectFit: 'cover' }} />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="d-block w-100" src={img5} alt="Slide 5" style={{ height: '300px', objectFit: 'cover' }} />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="d-block w-100" src={img6} alt="Slide 6" style={{ height: '300px', objectFit: 'cover' }} />
                     </Carousel.Item>
                 </Carousel>
-            </div>
-
-            <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto 3rem auto', padding: '3rem' }}>
-                <div style={{ marginBottom: '2rem' }}>
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrPObWUEKrBqrvd1OYTRY_LwudGF6HC7Ok1A&s"
-                        alt="Logo EEST UTN"
-                        style={{
-                            width: '120px',
-                            height: '120px',
-                            borderRadius: '50%',
-                            margin: '0 auto 1rem auto',
-                            objectFit: 'contain',
-                            background: '#fff',
-                            boxShadow: '0 0 30px rgba(0, 242, 255, 0.3)'
-                        }}
-                    />
-                    <h1>EEST UTN San Miguel</h1>
-                    <h2 style={{ fontSize: '1.5rem', color: 'var(--text-main)', marginTop: '0.5rem' }}>Especialidad Electrónica</h2>
-                </div>
-
-                <p>
-                    Plataforma de soporte didáctico para estudiantes y docentes.
-                </p>
-
-                <div style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'var(--text-dim)' }}>
-                    <p>📍 Rafael 50, Bella Vista, Buenos Aires, Argentina</p>
-                </div>
             </div>
 
             {isAuthenticated && (
