@@ -62,7 +62,7 @@ const NavBar = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <Link to="/" style={{ textDecoration: 'none', color: 'var(--text-main)', fontWeight: 'bold', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px' }} onClick={closeAll}>
                     <img
-                        src="/logo-pwa.png"
+                        src={`${import.meta.env.BASE_URL}logo-pwa.png`}
                         alt="Logo"
                         style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover', background: '#fff', border: '2px solid var(--primary-color)' }}
                     />
