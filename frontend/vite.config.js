@@ -10,10 +10,14 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'logo-pwa.png', 'pwa-192x192.png', 'pwa-512x512.png'],
       manifest: {
+        name: 'SmartJCP - Ciudad del Aprendizaje',
+        short_name: 'SmartJCP',
+        description: 'Plataforma educativa de José C. Paz Ciudad del Aprendizaje Intendente Mario Alberto Ishii',
+        theme_color: '#1a1a1a',
         background_color: '#1a1a1a',
         display: 'standalone',
-        scope: '/utnsanmiguel/',
-        start_url: '/utnsanmiguel/',
+        scope: '/smartjcp/',
+        start_url: '/smartjcp/',
         orientation: 'portrait',
         icons: [
           {
@@ -54,5 +58,5 @@ export default defineConfig({
       }
     })
   ],
-  base: '/utnsanmiguel/',
+  base: '/smartjcp/',
 })
