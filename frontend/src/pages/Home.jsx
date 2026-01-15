@@ -56,7 +56,7 @@ const Home = () => {
 
             {/* Start Smart City Vision Section */}
             <div style={{ maxWidth: '1200px', margin: '0 auto 2rem auto', textAlign: 'left' }}>
-                <div className="glass-card p-4" style={{ background: 'rgba(0,0,0,0.6)', border: '1px solid var(--primary-color)' }}>
+                <div className="glass-card p-4" style={{ border: '1px solid var(--primary-color)' }}>
                     <h2 className="text-center mb-4" style={{
                         background: 'linear-gradient(90deg, #00f2ff, #00c6ff)',
                         WebkitBackgroundClip: 'text',
