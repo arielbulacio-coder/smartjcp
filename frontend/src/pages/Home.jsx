@@ -4,17 +4,15 @@ import { Carousel } from 'react-bootstrap';
 import '../carousel.css';
 import { useAuth } from '../context/AuthContext';
 
+// Import Carousel Images (New Set from img/carrusel)
+import slide1 from '../assets/new_carousel/slide1.jpg';
+import slide2 from '../assets/new_carousel/slide2.jpg';
+import slide3 from '../assets/new_carousel/slide3.jpeg';
+import slide4 from '../assets/new_carousel/slide4.jpeg';
+import slide5 from '../assets/new_carousel/slide5.jpg';
+
 // Import Assets
-import img1 from '../assets/carousel/2.jpg';
-import img2 from '../assets/carousel/3.jpg';
-import img3 from '../assets/carousel/4.jpg';
-import img4 from '../assets/carousel/5.jpeg';
-import img5 from '../assets/carousel/6.jpeg';
-import img6 from '../assets/carousel/7.jpg';
 import imgLogo from '../assets/carousel/IMG-20251211-WA0113.jpg';
-
-// Tool Icons removed as they are no longer displayed on Home
-
 
 // Import New Highlight Covers
 import imgHeroMain from '../assets/highlights/cover_main.jpg';
@@ -25,14 +23,12 @@ import imgIA from '../assets/courses/curso_ia_learning_1768497523497.png';
 import imgCloud from '../assets/courses/curso_cloud_computing_1768497506593.png';
 import imgEnergia from '../assets/courses/curso_energia_electrica_1768497487244.png';
 
-// ... other imports
-
 const Home = () => {
     const { isAuthenticated } = useAuth();
     return (
         <div className="app-container" style={{ textAlign: 'center', paddingTop: '1rem', paddingBottom: '5rem' }}>
 
-            {/* HEADER / CONTEXT (Keep existing) */}
+            {/* HEADER / CONTEXT */}
             <div className="glass-card" style={{ maxWidth: '100%', margin: '0 auto 1.5rem auto', padding: '1.5rem', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '1rem' }}>
                     <img
@@ -59,7 +55,7 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* HERO SECTION (PORTADA) - UPDATED WITH USER IMAGE */}
+            {/* HERO SECTION (PORTADA) */}
             <div style={{
                 position: 'relative',
                 width: 'fit-content',
@@ -83,7 +79,7 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* FEATURED SECTION - UPDATED WITH USER IMAGE */}
+            {/* FEATURED SECTION */}
             <div style={{ maxWidth: '1200px', margin: '0 auto 3rem auto', display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center' }}>
                 <div style={{ flex: '1 1 500px', overflow: 'hidden', borderRadius: '16px', boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}>
                     <img src={imgHeroSmall} alt="Infraestructura Destacada" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
@@ -146,7 +142,7 @@ const Home = () => {
             </div>
             {/* End Smart City Vision Section */}
 
-            {/* Bootstrap Carousel - Remaining Images */}
+            {/* Bootstrap Carousel - New Images from img/carrusel */}
             <div style={{
                 width: '100%',
                 maxWidth: '1200px',
@@ -157,31 +153,25 @@ const Home = () => {
                 border: '1px solid rgba(255,255,255,0.1)'
             }}>
                 <Carousel fade interval={3500} pause="hover" touch={true}>
-                    {/* Slide 1 removed (Infrastructure) - Moved to highlighted section */}
-
                     <Carousel.Item>
-                        <img className="d-block w-100" src={img2} alt="Slide 2" style={{ height: '300px', objectFit: 'cover' }} />
-                        <Carousel.Caption className="glass-panel-caption">
-                            <h3>Tecnología Avanzada</h3>
-                            <p>Equipamiento moderno para nuestros estudiantes.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-
-                    {/* Slide 3 removed (Community) - Moved to highlighted section */}
-
-                    <Carousel.Item>
-                        <img className="d-block w-100" src={img4} alt="Slide 4" style={{ height: '300px', objectFit: 'cover' }} />
+                        <img className="d-block w-100" src={slide1} alt="Slide 1" style={{ height: '300px', objectFit: 'cover' }} />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src={img5} alt="Slide 5" style={{ height: '300px', objectFit: 'cover' }} />
+                        <img className="d-block w-100" src={slide2} alt="Slide 2" style={{ height: '300px', objectFit: 'cover' }} />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src={img6} alt="Slide 6" style={{ height: '300px', objectFit: 'cover' }} />
+                        <img className="d-block w-100" src={slide3} alt="Slide 3" style={{ height: '300px', objectFit: 'cover' }} />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="d-block w-100" src={slide4} alt="Slide 4" style={{ height: '300px', objectFit: 'cover' }} />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="d-block w-100" src={slide5} alt="Slide 5" style={{ height: '300px', objectFit: 'cover' }} />
                     </Carousel.Item>
                 </Carousel>
             </div>
 
-
+            {/* Community Courses - Only if Authenticated */}
             {isAuthenticated && (
                 <div style={{ marginTop: '3rem', textAlign: 'left', maxWidth: '1200px', margin: '3rem auto' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
@@ -241,7 +231,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        {/* Course Card 4 - New */}
+                        {/* Course Card 4 */}
                         <div className="glass-card" style={{ padding: '0', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
                             <div style={{ height: '160px', overflow: 'hidden' }}>
                                 <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2664&auto=format&fit=crop" alt="Blockchain" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -258,7 +248,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        {/* Course Card 5 - New */}
+                        {/* Course Card 5 */}
                         <div className="glass-card" style={{ padding: '0', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
                             <div style={{ height: '160px', overflow: 'hidden' }}>
                                 <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop" alt="Industria 4.0" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -275,7 +265,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        {/* Course Card 6 - New */}
+                        {/* Course Card 6 */}
                         <div className="glass-card" style={{ padding: '0', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
                             <div style={{ height: '160px', overflow: 'hidden' }}>
                                 <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2669&auto=format&fit=crop" alt="Tech Trends" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
