@@ -7,20 +7,20 @@ const AboutPage = () => {
         <div style={{ padding: '2rem 1rem 5rem 1rem', maxWidth: '1000px', margin: '0 auto' }}>
 
             {/* Cabecera Institucional */}
-            <div className="glass-card mb-5 p-0" style={{ overflow: 'hidden' }}>
-                <div style={{ position: 'relative' }}>
-                    <img src={imgHeroMain} alt="Portada SmartJCP" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <div className="glass-card mb-5 p-0" style={{ overflow: 'hidden', background: 'transparent', boxShadow: 'none' }}>
+                <div style={{ position: 'relative', width: 'fit-content', margin: '0 auto', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
+                    <img src={imgHeroMain} alt="Portada SmartJCP" style={{ height: 'auto', maxHeight: '400px', width: 'auto', maxWidth: '100%', display: 'block' }} />
                     <div style={{
                         position: 'absolute', bottom: 0, left: 0, right: 0,
                         background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)',
-                        padding: '2rem'
+                        padding: '1.5rem'
                     }}>
-                        <h1 style={{ color: 'white', marginBottom: '0.5rem', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>SmartJCP</h1>
-                        <h2 style={{ color: 'var(--primary-color)', fontSize: '1.4rem' }}>Plataforma Educativa de José C. Paz</h2>
+                        <h1 style={{ color: 'white', marginBottom: '0.5rem', textShadow: '0 2px 4px rgba(0,0,0,0.5)', fontSize: '1.8rem' }}>SmartJCP</h1>
+                        <h2 style={{ color: 'var(--primary-color)', fontSize: '1.1rem', margin: 0 }}>Plataforma Educativa de José C. Paz</h2>
                     </div>
                 </div>
 
-                <div className="p-4">
+                <div className="p-4 text-center">
                     <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-primary)' }}>
                         SmartJCP es la plataforma integral de gestión educativa y aprendizaje digital de <strong>José C. Paz, Ciudad del Aprendizaje</strong>.
                         Este proyecto nace con la visión de democratizar el acceso al conocimiento tecnológico y brindar herramientas de vanguardia a estudiantes, docentes y a toda la comunidad.
