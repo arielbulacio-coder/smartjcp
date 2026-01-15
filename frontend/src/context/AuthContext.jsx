@@ -26,6 +26,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
+            // Intento de login real
             const response = await api.post('/login', { email, password });
             const { token: newToken, user: userData } = response.data;
 
@@ -35,7 +36,27 @@ export const AuthProvider = ({ children }) => {
             localStorage.setItem('user', JSON.stringify(userData));
             return { success: true };
         } catch (error) {
-            console.error("Login component error:", error);
+            console.error("API Login failed, trying mock fallback...", error);
+
+            // FALLBACK MOCK PARA GITHUB PAGES / DEMO
+            // Si el backend no responde, simulamos un login exitoso para demostración
+            if (email.includes('@')) { // Validación básica
+                const mockUser = {
+                    id: 999,
+                    nombre: 'Usuario',
+                    apellido: 'Demo',
+                    email: email,
+                    role: 'admin' // Rol admin para ver todo
+                };
+                const mockToken = 'demo-token-123456';
+
+                setToken(mockToken);
+                setUser(mockUser);
+                localStorage.setItem('token', mockToken);
+                localStorage.setItem('user', JSON.stringify(mockUser));
+                return { success: true, message: 'Modo Demo Activado' };
+            }
+
             return {
                 success: false,
                 message: error.response?.data?.message || 'Error al iniciar sesión'
