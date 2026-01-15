@@ -5,7 +5,13 @@ import { useParams, Link } from 'react-router-dom';
 const CourseViewerPage = () => {
     const { id } = useParams();
     const [activeUnit, setActiveUnit] = useState('u1');
-    const [quizAnswers, setQuizAnswers] = useState({});
+    const [quizAnswers, setQuizAnswers] = useState(() => {
+        // Load initial state
+        const saved = localStorage.getItem(`smartjcp_course_${id}`);
+        try {
+            return saved ? JSON.parse(saved).answers : {};
+        } catch (e) { return {}; }
+    });
     const [showCertificate, setShowCertificate] = useState(false);
 
     // MOCK DATA - In real app, fetch by ID
@@ -37,14 +43,24 @@ const CourseViewerPage = () => {
         ]
     };
 
-    const handleAnswer = (qId, optionIdx) => {
-        setQuizAnswers({ ...quizAnswers, [qId]: optionIdx });
+    const calculateProgress = (answers) => {
+        const total = course.units.reduce((acc, u) => acc + (u.quiz ? u.quiz.length : 0), 0);
+        const answered = Object.keys(answers).length;
+        if (total === 0) return 0;
+        return Math.round((answered / total) * 100);
     };
 
-    const calculateProgress = () => {
-        const total = course.units.reduce((acc, u) => acc + (u.quiz ? u.quiz.length : 0), 0);
-        const answered = Object.keys(quizAnswers).length;
-        return Math.round((answered / total) * 100);
+    const handleAnswer = (qId, optionIdx) => {
+        const newAnswers = { ...quizAnswers, [qId]: optionIdx };
+        setQuizAnswers(newAnswers);
+
+        // Save to localStorage
+        const progress = calculateProgress(newAnswers);
+        localStorage.setItem(`smartjcp_course_${id}`, JSON.stringify({
+            answers: newAnswers,
+            progress: progress,
+            lastAccess: new Date().toISOString()
+        }));
     };
 
     return (
@@ -55,7 +71,7 @@ const CourseViewerPage = () => {
                 <h1>{course.title}</h1>
                 <div style={{ width: '200px' }}>
                     <small>Progreso General</small>
-                    <ProgressBar now={calculateProgress()} variant="success" label={`${calculateProgress()}%`} />
+                    <ProgressBar now={calculateProgress(quizAnswers)} variant="success" label={`${calculateProgress(quizAnswers)}%`} />
                 </div>
             </div>
 
@@ -80,7 +96,7 @@ const CourseViewerPage = () => {
                         </Nav>
                     </Card>
 
-                    {calculateProgress() === 100 && (
+                    {calculateProgress(quizAnswers) === 100 && (
                         <div className="mt-3">
                             <Button variant="success" className="w-100 fw-bold" onClick={() => setShowCertificate(true)}>
                                 🏆 Solicitar Certificado
