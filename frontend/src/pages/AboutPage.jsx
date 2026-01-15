@@ -8,8 +8,8 @@ const AboutPage = () => {
 
             {/* Cabecera Institucional */}
             <div className="glass-card mb-5 p-0" style={{ overflow: 'hidden' }}>
-                <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000' }}>
-                    <img src={imgHeroMain} alt="Portada SmartJCP" style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'contain' }} />
+                <div style={{ position: 'relative' }}>
+                    <img src={imgHeroMain} alt="Portada SmartJCP" style={{ width: '100%', height: 'auto', display: 'block' }} />
                     <div style={{
                         position: 'absolute', bottom: 0, left: 0, right: 0,
                         background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)',

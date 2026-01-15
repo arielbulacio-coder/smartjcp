@@ -70,10 +70,9 @@ const Home = () => {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                background: '#000'
+                justifyContent: 'center'
             }}>
-                <img src={imgHeroMain} alt="Portada José C. Paz" style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'contain' }} />
+                <img src={imgHeroMain} alt="Portada José C. Paz" style={{ width: '100%', height: 'auto', display: 'block' }} />
                 <div style={{
                     position: 'absolute',
                     bottom: 0, left: 0, right: 0,
