@@ -23,7 +23,23 @@ const CourseSubjectManager = () => {
             setCourses(resC.data);
             setSubjects(resS.data);
         } catch (error) {
-            console.error('Error loading data:', error);
+            console.error('Error loading data, using MOCK data:', error);
+            // MOCK DATA FOR DEMO
+            setCourses([
+                { id: 1, nombre: '1° Año - A' },
+                { id: 2, nombre: '1° Año - B' },
+                { id: 3, nombre: '2° Año - A' },
+                { id: 4, nombre: 'Curso Python' },
+                { id: 5, nombre: 'Curso Robótica' }
+            ]);
+            setSubjects([
+                { id: 1, nombre: 'Matemáticas' },
+                { id: 2, nombre: 'Lengua y Literatura' },
+                { id: 3, nombre: 'Programación I' },
+                { id: 4, nombre: 'Robótica Aplicada' },
+                { id: 5, nombre: 'Inglés Técnico' },
+                { id: 6, nombre: 'Sistemas Digitales' }
+            ]);
         }
     };
 

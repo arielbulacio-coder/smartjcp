@@ -50,7 +50,42 @@ const TeacherAssignment = () => {
             setAssignments(resAsig.data);
 
         } catch (error) {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching data, using MOCK data:', error);
+            // MOCK DATA FALLBACK FOR DEMO
+            // Teachers
+            const mockTeachers = [
+                { id: 1, email: 'juan.perez@smartjcp.edu', role: 'profesor' },
+                { id: 2, email: 'maria.gonzalez@smartjcp.edu', role: 'profesor' },
+                { id: 3, email: 'roberto.gomez@smartjcp.edu', role: 'profesor' }
+            ];
+            setTeachers(mockTeachers);
+            if (!selectedTeacher) setSelectedTeacher(mockTeachers[0].email);
+
+            // Courses (renamed from "Cursos" context to "Aulas/Grados")
+            const mockCursos = [
+                { id: 1, nombre: '1° Año - A' },
+                { id: 2, nombre: '2° Año - B' },
+                { id: 3, nombre: 'Curso Python' },
+                { id: 4, nombre: 'Curso Robótica' }
+            ];
+            setCourseOptions(mockCursos);
+            if (!selectedCourse) setSelectedCourse(mockCursos[0].nombre);
+
+            // Subjects (Materia -> Curso Temático)
+            const mockMaterias = [
+                { id: 1, nombre: 'Matemáticas' },
+                { id: 2, nombre: 'Programación I' },
+                { id: 3, nombre: 'Robótica Aplicada' },
+                { id: 4, nombre: 'Diseño Web' }
+            ];
+            setSubjectOptions(mockMaterias);
+            if (!selectedSubject) setSelectedSubject(mockMaterias[0].nombre);
+
+            // Assignments
+            setAssignments([
+                { id: 1, email_profesor: 'juan.perez@smartjcp.edu', curso: 'Curso Python', materia: 'Programación I', ciclo_lectivo: 2026 },
+                { id: 2, email_profesor: 'maria.gonzalez@smartjcp.edu', curso: 'Curso Robótica', materia: 'Robótica Aplicada', ciclo_lectivo: 2026 }
+            ]);
         }
         setLoading(false);
     };

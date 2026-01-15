@@ -16,6 +16,11 @@ import imgLogo from '../assets/carousel/IMG-20251211-WA0113.jpg';
 // Tool Icons removed as they are no longer displayed on Home
 
 
+// Import Community Course Images
+import imgIA from '../assets/courses/curso_ia_learning_1768497523497.png';
+import imgCloud from '../assets/courses/curso_cloud_computing_1768497506593.png';
+import imgEnergia from '../assets/courses/curso_energia_electrica_1768497487244.png';
+
 // ... other imports
 
 const Home = () => {
@@ -139,9 +144,66 @@ const Home = () => {
                 </Carousel>
             </div>
 
-            {isAuthenticated && (
-                <div style={{ marginTop: '2rem' }}>
 
+            {isAuthenticated && (
+                <div style={{ marginTop: '3rem', textAlign: 'left', maxWidth: '1200px', margin: '3rem auto' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
+                        <h2 style={{ margin: 0 }}>🌍 Cursos Abiertos a la Comunidad</h2>
+                        <Link to="/cursos-comunidad" className="btn btn-outline-primary" style={{ borderRadius: '20px' }}>Ver todos</Link>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', padding: '0 1rem' }}>
+                        {/* Course Card 1 */}
+                        <div className="glass-card" style={{ padding: '0', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
+                            <div style={{ height: '160px', overflow: 'hidden' }}>
+                                <img src={imgIA} alt="IA Learning" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>Inteligencia Artificial</h3>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-dim)', flex: 1 }}>
+                                    Aprende los fundamentos de la IA y Machine Learning aplicados a problemas reales.
+                                </p>
+                                <div style={{ marginTop: '1rem' }}>
+                                    <span className="badge bg-primary me-2">Tecnología</span>
+                                    <span className="badge bg-info text-dark">Gratuito</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Course Card 2 */}
+                        <div className="glass-card" style={{ padding: '0', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
+                            <div style={{ height: '160px', overflow: 'hidden' }}>
+                                <img src={imgCloud} alt="Cloud Computing" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>Cloud Computing</h3>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-dim)', flex: 1 }}>
+                                    Domina la nube con AWS y Google Cloud. Despliegue, escalabilidad y seguridad.
+                                </p>
+                                <div style={{ marginTop: '1rem' }}>
+                                    <span className="badge bg-primary me-2">Infraestructura</span>
+                                    <span className="badge bg-info text-dark">Certificado</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Course Card 3 */}
+                        <div className="glass-card" style={{ padding: '0', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
+                            <div style={{ height: '160px', overflow: 'hidden' }}>
+                                <img src={imgEnergia} alt="Energías Renovables" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>Energías Renovables</h3>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-dim)', flex: 1 }}>
+                                    Introducción a sistemas solares y eólicos para un futuro sustentable.
+                                </p>
+                                <div style={{ marginTop: '1rem' }}>
+                                    <span className="badge bg-success me-2">Sustentabilidad</span>
+                                    <span className="badge bg-info text-dark">Práctico</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>
