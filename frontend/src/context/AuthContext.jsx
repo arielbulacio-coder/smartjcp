@@ -40,27 +40,22 @@ export const AuthProvider = ({ children }) => {
 
             // FALLBACK MOCK PARA GITHUB PAGES / DEMO
             // Si el backend no responde, simulamos un login exitoso para demostración
-            if (email.includes('@')) { // Validación básica
-                const mockUser = {
-                    id: 999,
-                    nombre: 'Usuario',
-                    apellido: 'Demo',
-                    email: email,
-                    role: 'admin' // Rol admin para ver todo
-                };
-                const mockToken = 'demo-token-123456';
-
-                setToken(mockToken);
-                setUser(mockUser);
-                localStorage.setItem('token', mockToken);
-                localStorage.setItem('user', JSON.stringify(mockUser));
-                return { success: true, message: 'Modo Demo Activado' };
-            }
-
-            return {
-                success: false,
-                message: error.response?.data?.message || 'Error al iniciar sesión'
+            // Permitimos cualquier credencial
+            const mockUser = {
+                id: 999,
+                nombre: 'Director',
+                apellido: 'Demo',
+                email: email || 'director@smartjcp.edu',
+                foto: 'https://ui-avatars.com/api/?name=Director+Demo&background=0D8ABC&color=fff',
+                role: 'director' // Rol solicitado por el usuario
             };
+            const mockToken = 'demo-token-director-123';
+
+            setToken(mockToken);
+            setUser(mockUser);
+            localStorage.setItem('token', mockToken);
+            localStorage.setItem('user', JSON.stringify(mockUser));
+            return { success: true, message: 'Modo Director Demo Activado' };
         }
     };
 
