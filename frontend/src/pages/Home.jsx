@@ -47,6 +47,51 @@ const Home = () => {
                 </div>
             </div>
 
+            {/* Start Smart City Vision Section */}
+            <div style={{ maxWidth: '1200px', margin: '0 auto 2rem auto', textAlign: 'left' }}>
+                <div className="glass-card p-4" style={{ background: 'rgba(0,0,0,0.6)', border: '1px solid var(--primary-color)' }}>
+                    <h2 className="text-center mb-4" style={{
+                        background: 'linear-gradient(90deg, #00f2ff, #00c6ff)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        textTransform: 'uppercase',
+                        letterSpacing: '2px'
+                    }}>
+                        Visión Smart City 2030
+                    </h2>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                        {/* Feature 1 */}
+                        <div style={{ padding: '1rem', borderLeft: '3px solid var(--primary-color)' }}>
+                            <h3 style={{ color: 'var(--text-main)', fontSize: '1.4rem' }}>📡 Conectividad & Networking</h3>
+                            <p style={{ color: 'var(--text-dim)', fontSize: '0.95rem' }}>
+                                Infraestructura tecnológica basada en <strong>Cloud Computing</strong> y redes de alta velocidad.
+                                Un ecosistema digital multidisciplinario que conecta a docentes, alumnos y la comunidad en tiempo real.
+                            </p>
+                        </div>
+
+                        {/* Feature 2 */}
+                        <div style={{ padding: '1rem', borderLeft: '3px solid var(--secondary-color)' }}>
+                            <h3 style={{ color: 'var(--text-main)', fontSize: '1.4rem' }}>🎨 Diseño Funcional & Moderno</h3>
+                            <p style={{ color: 'var(--text-dim)', fontSize: '0.95rem' }}>
+                                Una experiencia de usuario (UX) <strong>amigable, elegante y funcional</strong>.
+                                Aplicación multiplataforma y multidispositivo pensada para el estudiante digital del siglo XXI.
+                            </p>
+                        </div>
+
+                        {/* Feature 3 */}
+                        <div style={{ padding: '1rem', borderLeft: '3px solid #10b981' }}>
+                            <h3 style={{ color: 'var(--text-main)', fontSize: '1.4rem' }}>🧠 Sociedad del Conocimiento</h3>
+                            <p style={{ color: 'var(--text-dim)', fontSize: '0.95rem' }}>
+                                Fomentando el desarrollo de <strong>estudiantes destacados</strong> mediante el acceso universal al aprendizaje.
+                                Un nuevo concepto educativo centrado en la innovación y el talento local.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* End Smart City Vision Section */}
+
             {/* Bootstrap Carousel - New Images */}
             <div style={{
                 width: '100%',
