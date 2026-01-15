@@ -13,6 +13,13 @@ import img5 from '../assets/carousel/6.jpeg';
 import img6 from '../assets/carousel/7.jpg';
 import imgLogo from '../assets/carousel/IMG-20251211-WA0113.jpg';
 
+// Tool Icons
+import imgMicrometer from '../assets/micrometer_icon.png';
+import imgCaliper from '../assets/caliper_icon.png';
+import imgSoldering from '../assets/soldering_station_icon.png';
+import imgOscilloscope from '../assets/oscilloscope_icon.png';
+import imgMultimeter from '../assets/multimeter_icon.png';
+
 // ... other imports
 
 const Home = () => {
